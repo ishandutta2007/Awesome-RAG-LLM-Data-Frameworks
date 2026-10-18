@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="380" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a14" />
+      <stop offset="50%" stop-color="#0d1424" />
+      <stop offset="100%" stop-color="#080c18" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primary-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#4facfe" />
+      <stop offset="100%" stop-color="#9b51e0" />
+    </linearGradient>
+
+    <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#9b51e0" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00f5a0" stop-opacity="0.7" />
+    </linearGradient>
+
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#e0f7fa" />
+      <stop offset="100%" stop-color="#80deea" />
+    </linearGradient>
+
+    <radialGradient id="mesh-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.18" />
+      <stop offset="50%" stop-color="#9b51e0" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#070a14" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="glow-blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Embedded CSS Animation Styles -->
+    <style>
+      @keyframes pulseAura {
+        0% { transform: scale(0.95); opacity: 0.5; }
+        50% { transform: scale(1.08); opacity: 0.85; }
+        100% { transform: scale(0.95); opacity: 0.5; }
+      }
+
+      @keyframes floatParticle1 {
+        0% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+        50% { transform: translateY(-18px) translateX(12px); opacity: 0.9; }
+        100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+      }
+
+      @keyframes floatParticle2 {
+        0% { transform: translateY(0px) translateX(0px); opacity: 0.4; }
+        50% { transform: translateY(22px) translateX(-15px); opacity: 1; }
+        100% { transform: translateY(0px) translateX(0px); opacity: 0.4; }
+      }
+
+      @keyframes dashStream {
+        to { stroke-dashoffset: -400; }
+      }
+
+      @keyframes pillBob {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+        100% { transform: translateY(0px); }
+      }
+
+      .pulse-bg {
+        transform-origin: 600px 190px;
+        animation: pulseAura 8s ease-in-out infinite;
+      }
+
+      .particle-1 { animation: floatParticle1 6s ease-in-out infinite; }
+      .particle-2 { animation: floatParticle2 7s ease-in-out infinite; }
+
+      .stream-line {
+        stroke-dasharray: 12 16;
+        animation: dashStream 15s linear infinite;
+      }
+
+      .pill-anim-1 { animation: pillBob 4s ease-in-out infinite; }
+      .pill-anim-2 { animation: pillBob 5s ease-in-out infinite 1s; }
+      .pill-anim-3 { animation: pillBob 4.5s ease-in-out infinite 2s; }
+      .pill-anim-4 { animation: pillBob 5.5s ease-in-out infinite 0.5s; }
+
+      .brand-title {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 800;
+        font-size: 44px;
+        letter-spacing: -0.5px;
+      }
+
+      .brand-subtitle {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: 0.3px;
+        fill: #94a3b8;
+      }
+
+      .pill-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base Canvas -->
+  <rect width="1200" height="380" rx="16" fill="url(#bg-grad)" />
+
+  <!-- Grid Overlay -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="380" />
+    <line x1="200" y1="0" x2="200" y2="380" />
+    <line x1="300" y1="0" x2="300" y2="380" />
+    <line x1="400" y1="0" x2="400" y2="380" />
+    <line x1="500" y1="0" x2="500" y2="380" />
+    <line x1="600" y1="0" x2="600" y2="380" />
+    <line x1="700" y1="0" x2="700" y2="380" />
+    <line x1="800" y1="0" x2="800" y2="380" />
+    <line x1="900" y1="0" x2="900" y2="380" />
+    <line x1="1000" y1="0" x2="1000" y2="380" />
+    <line x1="1100" y1="0" x2="1100" y2="380" />
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+  </g>
+
+  <!-- Pulsing Central Aura -->
+  <circle class="pulse-bg" cx="600" cy="190" r="300" fill="url(#mesh-glow)" />
+
+  <!-- Dynamic Network Connection Streams (Background) -->
+  <g fill="none" opacity="0.45">
+    <path class="stream-line" d="M 50 190 Q 300 70 600 190 T 1150 190" stroke="#00f2fe" stroke-width="2" />
+    <path class="stream-line" d="M 50 120 Q 350 280 600 120 T 1150 250" stroke="#9b51e0" stroke-width="1.5" />
+    <path class="stream-line" d="M 100 280 Q 400 90 700 260 T 1100 110" stroke="#00f5a0" stroke-width="1.5" />
+  </g>
+
+  <!-- Glowing Animated Particles (Background) -->
+  <g class="particle-1">
+    <circle cx="220" cy="110" r="4" fill="#00f2fe" filter="url(#soft-glow)" />
+    <circle cx="980" cy="270" r="3.5" fill="#00f5a0" filter="url(#soft-glow)" />
+    <circle cx="380" cy="310" r="3" fill="#9b51e0" filter="url(#soft-glow)" />
+    <circle cx="850" cy="90" r="4.5" fill="#4facfe" filter="url(#soft-glow)" />
+  </g>
+  <g class="particle-2">
+    <circle cx="150" cy="240" r="3" fill="#9b51e0" filter="url(#soft-glow)" />
+    <circle cx="1040" cy="130" r="4" fill="#00f2fe" filter="url(#soft-glow)" />
+    <circle cx="750" cy="320" r="3.5" fill="#00f5a0" filter="url(#soft-glow)" />
+    <circle cx="450" cy="80" r="3" fill="#4facfe" filter="url(#soft-glow)" />
+  </g>
+
+  <!-- Subtle Floating Topic Pills (Background layer, positioned away from center title) -->
+  <g class="pill-anim-1" opacity="0.85">
+    <rect x="70" y="45" width="135" height="32" rx="16" fill="#131c31" stroke="#00f2fe" stroke-width="1" />
+    <circle cx="88" cy="61" r="5" fill="#00f2fe" />
+    <text x="102" y="66" class="pill-text" fill="#e2e8f0">Vector DBs</text>
+  </g>
+
+  <g class="pill-anim-2" opacity="0.85">
+    <rect x="990" y="45" width="140" height="32" rx="16" fill="#131c31" stroke="#9b51e0" stroke-width="1" />
+    <circle cx="1008" cy="61" r="5" fill="#9b51e0" />
+    <text x="1022" y="66" class="pill-text" fill="#e2e8f0">Hybrid Search</text>
+  </g>
+
+  <g class="pill-anim-3" opacity="0.85">
+    <rect x="65" y="305" width="165" height="32" rx="16" fill="#131c31" stroke="#00f5a0" stroke-width="1" />
+    <circle cx="83" cy="321" r="5" fill="#00f5a0" />
+    <text x="97" y="326" class="pill-text" fill="#e2e8f0">Knowledge Graphs</text>
+  </g>
+
+  <g class="pill-anim-4" opacity="0.85">
+    <rect x="965" y="305" width="170" height="32" rx="16" fill="#131c31" stroke="#4facfe" stroke-width="1" />
+    <circle cx="983" cy="321" r="5" fill="#4facfe" />
+    <text x="997" y="326" class="pill-text" fill="#e2e8f0">Agentic Retrieval</text>
+  </g>
+
+  <!-- Center Protected Foreground Text Shield (Semi-transparent dark card with glowing border) -->
+  <g>
+    <!-- Card Backdrop Shadow & Blur to protect text legibility -->
+    <rect x="180" y="90" width="840" height="200" rx="20" fill="#070a14" fill-opacity="0.88" stroke="url(#card-border)" stroke-width="1.8" filter="url(#glow-blur)" />
+    <!-- Crisp Foreground Fill -->
+    <rect x="180" y="90" width="840" height="200" rx="20" fill="#070b16" fill-opacity="0.94" stroke="url(#card-border)" stroke-width="1.5" />
+
+    <!-- Top Badge in Card -->
+    <g transform="translate(490, 115)">
+      <rect x="0" y="0" width="220" height="26" rx="13" fill="#17223b" stroke="#00f2fe" stroke-width="1" />
+      <circle cx="16" cy="13" r="4.5" fill="#00f5a0" />
+      <text x="30" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-weight="700" font-size="11" fill="#38bdf8" letter-spacing="1">CURATED ECOSYSTEM 2026</text>
+    </g>
+
+    <!-- Main Title (Guaranteed in foreground) -->
+    <text x="600" y="195" text-anchor="middle" class="brand-title" fill="url(#text-grad)">Awesome RAG &amp; LLM Data Frameworks</text>
+
+    <!-- Subtitle (Guaranteed in foreground) -->
+    <text x="600" y="235" text-anchor="middle" class="brand-subtitle">
+      Data Ingestion • Retrieval Abstraction • Vector Databases • Production RAG
+    </text>
+
+    <!-- Bottom Feature Tag Highlights -->
+    <g transform="translate(340, 255)">
+      <text x="0" y="12" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="500" fill="#64748b">⚡ High-Recall Vector Search</text>
+      <text x="190" y="12" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="500" fill="#64748b">•</text>
+      <text x="215" y="12" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="500" fill="#64748b">🧠 Agentic Orchestration</text>
+      <text x="385" y="12" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="500" fill="#64748b">•</text>
+      <text x="410" y="12" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="500" fill="#64748b">📊 Enterprise Governance</text>
+    </g>
+  </g>
+
+  <!-- Outer Canvas Border -->
+  <rect x="0" y="0" width="1200" height="380" rx="16" fill="none" stroke="#1e293b" stroke-width="1.5" />
+</svg>
