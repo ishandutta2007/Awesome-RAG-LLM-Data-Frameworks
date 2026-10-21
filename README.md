@@ -196,7 +196,7 @@ Contributions are warmly welcome! Help make this ecosystem resource even more co
 2. 🌿 **Create a descriptive feature branch** (`git checkout -b feature/add-new-framework`).
 3. 📝 **Add or update entries in `README.md`**:
    - For SaaS: Name, link, company scale, exact starting price, exact free tier limits, and core focus.
-   - For Open-Source: Name, GitHub repository link, star badge, primary focus, and license.
+   - For Open-Source: Name, GitHub repository link, Stars_Badge, primary focus, and license.
 4. 📬 **Submit a Pull Request** with a concise explanation of your additions.
 
 ---
@@ -229,3 +229,12 @@ If you find this curated RAG and LLM Data Frameworks list valuable for your rese
   <b>Curated with care by <a href="https://github.com/ishandutta2007">Ishan Dutta</a> and the global AI open-source community.</b><br>
   Explore more awesome curated lists at <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome">Awesome-Awesome-Awesome</a>.
 </p>
+
+## Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-RAG-LLM-Data-Frameworks&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-RAG-LLM-Data-Frameworks_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-RAG-LLM-Data-Frameworks_growth.svg">
+  </picture>
+</a>
